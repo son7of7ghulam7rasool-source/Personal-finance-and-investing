@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WealthWise | Personal Finance & Investing Blog</title>
+  <meta name="description" content="Practical guides on budgeting, saving, investing and building long-term wealth." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 700: '#047857', 900: '#064e3b' },
+            ink: '#0f172a'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ===== GOOGLE ADSENSE SCRIPT PLACEHOLDER (paste your site-wide AdSense code here) =====
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  ======================================================================================= -->
+</head>
+
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2 text-xl font-extrabold text-ink">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">W</span>
+        Wealth<span class="text-brand-600">Wise</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="#home" class="hover:text-brand-600 transition">Home</a></li>
+        <li><a href="#articles" class="hover:text-brand-600 transition">Articles</a></li>
+        <li><a href="#about" class="hover:text-brand-600 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-brand-600 transition">Contact</a></li>
+      </ul>
+
+      <a href="#newsletter" class="hidden md:inline-block rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition">Subscribe</a>
+
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 bg-white">
+      <ul class="px-4 py-3 space-y-1 text-sm font-medium">
+        <li><a href="#home" class="block rounded-lg px-3 py-2 hover:bg-slate-50">Home</a></li>
+        <li><a href="#articles" class="block rounded-lg px-3 py-2 hover:bg-slate-50">Articles</a></li>
+        <li><a href="#about" class="block rounded-lg px-3 py-2 hover:bg-slate-50">About</a></li>
+        <li><a href="#contact" class="block rounded-lg px-3 py-2 hover:bg-slate-50">Contact</a></li>
+        <li><a href="#newsletter" class="block rounded-lg bg-brand-600 px-3 py-2 text-center text-white">Subscribe</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-emerald-500 text-white">
+      <div class="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-white/10 blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-emerald-300/20 blur-3xl"></div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block rounded-full bg-white/15 px-4 py-1 text-xs font-semibold uppercase tracking-wider">Personal Finance &amp; Investing</span>
+          <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Take control of your money. <span class="text-emerald-200">Grow it with confidence.</span>
+          </h1>
+          <p class="mt-5 text-lg text-emerald-50/90 max-w-xl">
+            Clear, honest guides on budgeting, saving, and investing, written for real people who want financial freedom without the jargon.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#articles" class="rounded-full bg-white px-7 py-3 text-center font-semibold text-brand-700 hover:bg-emerald-50 transition">Read Latest Articles</a>
+            <a href="#newsletter" class="rounded-full border border-white/40 px-7 py-3 text-center font-semibold hover:bg-white/10 transition">Get Free Weekly Tips</a>
+          </div>
+          <dl class="mt-12 grid grid-cols-3 gap-6 max-w-md">
+            <div><dt class="text-xs uppercase tracking-wider text-emerald-100">Articles</dt><dd class="text-2xl font-bold">150+</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-emerald-100">Readers</dt><dd class="text-2xl font-bold">25K+</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-emerald-100">Topics</dt><dd class="text-2xl font-bold">12</dd></div>
+          </dl>
+        </div>
+
+        <!-- Hero visual card -->
+        <div class="hidden lg:block">
+          <div class="rounded-3xl bg-white/10 backdrop-blur p-6 border border-white/20 shadow-2xl">
+            <p class="text-sm text-emerald-100">Sample Portfolio Growth</p>
+            <p class="mt-1 text-4xl font-extrabold">$24,860 <span class="text-base font-semibold text-emerald-200">+12.4%</span></p>
+            <svg viewBox="0 0 300 120" class="mt-4 w-full" fill="none">
+              <path d="M0 100 L40 85 L80 92 L120 60 L160 68 L200 38 L240 44 L300 10" stroke="#a7f3d0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M0 100 L40 85 L80 92 L120 60 L160 68 L200 38 L240 44 L300 10 L300 120 L0 120Z" fill="url(#g)" opacity=".35"/>
+              <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a7f3d0"/><stop offset="1" stop-color="#a7f3d0" stop-opacity="0"/></linearGradient></defs>
+            </svg>
+            <p class="mt-3 text-xs text-emerald-100/80">Illustrative example only. Not financial advice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ADSENSE: LEADERBOARD (below hero) ================= -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <!-- ===== ADSENSE AD SLOT #1: Responsive Leaderboard (728x90 / responsive) =====
+           Paste your Google AdSense ad code inside the div below.
+      -->
+      <div class="flex min-h-[90px] items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-50 text-xs text-slate-400">
+        Advertisement
+      </div>
+      <!-- ===== END ADSENSE AD SLOT #1 ===== -->
+    </div>
+
+    <!-- ================= TOPICS ================= -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="#articles" class="group rounded-2xl border border-slate-100 p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
+          <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-2xl">💰</div>
+          <h3 class="font-semibold text-ink group-hover:text-brand-600">Budgeting</h3>
+        </a>
+        <a href="#articles" class="group rounded-2xl border border-slate-100 p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
+          <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-2xl">📈</div>
+          <h3 class="font-semibold text-ink group-hover:text-brand-600">Investing</h3>
+        </a>
+        <a href="#articles" class="group rounded-2xl border border-slate-100 p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
+          <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-2xl">🏦</div>
+          <h3 class="font-semibold text-ink group-hover:text-brand-600">Saving</h3>
+        </a>
+        <a href="#articles" class="group rounded-2xl border border-slate-100 p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
+          <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-2xl">💳</div>
+          <h3 class="font-semibold text-ink group-hover:text-brand-600">Debt &amp; Credit</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED ARTICLES ================= -->
+    <section id="articles" class="bg-slate-50 py-16 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">Featured</p>
+            <h2 class="mt-1 text-3xl sm:text-4xl font-extrabold text-ink">Latest from the Blog</h2>
+          </div>
+          <a href="#" class="text-sm font-semibold text-brand-600 hover:underline">View all articles →</a>
+        </div>
+
+        <div class="mt-10 grid lg:grid-cols-3 gap-8">
+          <!-- Main column -->
+          <div class="lg:col-span-2 space-y-8">
+
+            <!-- Big featured post -->
+            <article class="overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg transition">
+              <!-- Replace with your image: <img src="your-image.jpg" alt="..." class="h-64 w-full object-cover"> -->
+              <div class="h-64 w-full bg-gradient-to-br from-brand-500 to-brand-900 flex items-center justify-center text-6xl">📊</div>
+              <div class="p-6 sm:p-8">
+                <div class="flex items-center gap-3 text-xs">
+                  <span class="rounded-full bg-brand-50 px-3 py-1 font-semibold text-brand-700">Investing</span>
+                  <span class="text-slate-400">Oct 21, 2026 · 8 min read</span>
+                </div>
+                <h3 class="mt-3 text-2xl font-bold text-ink hover:text-brand-600">
+                  <a href="#">[Featured Article Title] How to Start Investing With Just $100</a>
+                </h3>
+                <p class="mt-3 text-slate-600">
+                  [Placeholder excerpt] A short summary of your article goes here. Explain what the reader will learn, why it matters, and what action they can take today.
+                </p>
+                <a href="#" class="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:gap-2 transition-all">Read more →</a>
+              </div>
+            </article>
+
+            <!-- ===== ADSENSE AD SLOT #2: In-article / In-feed ad ===== -->
+            <div class="flex min-h-[120px] items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white text-xs text-slate-400">
+              Advertisement
+            </div>
+            <!-- ===== END ADSENSE AD SLOT #2 ===== -->
+
+            <!-- Two smaller posts -->
+            <div class="grid sm:grid-cols-2 gap-8">
+              <article class="overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg transition">
+                <div class="h-44 bg-gradient-to-br from-emerald-300 to-brand-600 flex items-center justify-center text-5xl">💰</div>
+                <div class="p-6">
+                  <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">Budgeting</span>
+                  <h3 class="mt-3 text-lg font-bold text-ink hover:text-brand-600"><a href="#">[Article Title] The 50/30/20 Budget Explained</a></h3>
+                  <p class="mt-2 text-sm text-slate-600">[Placeholder excerpt] A one or two sentence teaser for this article.</p>
+                  <p class="mt-4 text-xs text-slate-400">Oct 18, 2026 · 5 min read</p>
+                </div>
+              </article>
+
+              <article class="overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg transition">
+                <div class="h-44 bg-gradient-to-br from-teal-300 to-emerald-700 flex items-center justify-center text-5xl">🏦</div>
+                <div class="p-6">
+                  <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">Saving</span>
+                  <h3 class="mt-3 text-lg font-bold text-ink hover:text-brand-600"><a href="#">[Article Title] Building Your Emergency Fund Fast</a></h3>
+                  <p class="mt-2 text-sm text-slate-600">[Placeholder excerpt] A one or two sentence teaser for this article.</p>
+                  <p class="mt-4 text-xs text-slate-400">Oct 15, 2026 · 6 min read</p>
+                </div>
+              </article>
+
+              <article class="overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg transition">
+                <div class="h-44 bg-gradient-to-br from-lime-300 to-brand-700 flex items-center justify-center text-5xl">📈</div>
+                <div class="p-6">
+                  <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">Investing</span>
+                  <h3 class="mt-3 text-lg font-bold text-ink hover:text-brand-600"><a href="#">[Article Title] Index Funds vs. ETFs: What's the Difference?</a></h3>
+                  <p class="mt-2 text-sm text-slate-600">[Placeholder excerpt] A one or two sentence teaser for this article.</p>
+                  <p class="mt-4 text-xs text-slate-400">Oct 12, 2026 · 7 min read</p>
+                </div>
+              </article>
+
+              <article class="overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg transition">
+                <div class="h-44 bg-gradient-to-br from-cyan-300 to-emerald-600 flex items-center justify-center text-5xl">💳</div>
+                <div class="p-6">
+                  <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">Debt &amp; Credit</span>
+                  <h3 class="mt-3 text-lg font-bold text-ink hover:text-brand-600"><a href="#">[Article Title] Pay Off Debt: Snowball vs. Avalanche</a></h3>
+                  <p class="mt-2 text-sm text-slate-600">[Placeholder excerpt] A one or two sentence teaser for this article.</p>
+                  <p class="mt-4 text-xs text-slate-400">Oct 9, 2026 · 6 min read</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="space-y-8">
+            <!-- ===== ADSENSE AD SLOT #3: Sidebar (300x250 / 300x600) ===== -->
+            <div class="flex min-h-[250px] items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white text-xs text-slate-400">
+              Advertisement
+            </div>
+            <!-- ===== END ADSENSE AD SLOT #3 ===== -->
+
+            <div class="rounded-2xl bg-white p-6 shadow-sm">
+              <h4 class="font-bold text-ink">Popular Posts</h4>
+              <ol class="mt-4 space-y-4 text-sm">
+                <li class="flex gap-3"><span class="font-extrabold text-brand-500">01</span><a href="#" class="hover:text-brand-600">[Popular Post Title One]</a></li>
+                <li class="flex gap-3"><span class="font-extrabold text-brand-500">02</span><a href="#" class="hover:text-brand-600">[Popular Post Title Two]</a></li>
+                <li class="flex gap-3"><span class="font-extrabold text-brand-500">03</span><a href="#" class="hover:text-brand-600">[Popular Post Title Three]</a></li>
+                <li class="flex gap-3"><span class="font-extrabold text-brand-500">04</span><a href="#" class="hover:text-brand-600">[Popular Post Title Four]</a></li>
+              </ol>
+            </div>
+
+            <!-- ===== ADSENSE AD SLOT #4: Sidebar sticky (300x600) ===== -->
+            <div class="flex min-h-[300px] items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white text-xs text-slate-400">
+              Advertisement
+            </div>
+            <!-- ===== END ADSENSE AD SLOT #4 ===== -->
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section id="newsletter" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="rounded-3xl bg-ink px-6 py-12 sm:px-12 text-center text-white">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Get smarter with money, every week</h2>
+        <p class="mt-3 text-slate-300">Join our free newsletter. One practical tip, no spam, unsubscribe anytime.</p>
+        <!-- Connect to your email provider (Mailchimp, ConvertKit, etc.) by changing the form action -->
+        <form action="#" method="POST" class="mt-6 mx-auto flex max-w-md flex-col sm:flex-row gap-3">
+          <input type="email" required placeholder="Your email address" class="flex-1 rounded-full px-5 py-3 text-ink focus:outline-none focus:ring-2 focus:ring-brand-500" />
+          <button type="submit" class="rounded-full bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-600 transition">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="bg-brand-50 py-16 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="flex justify-center">
+          <!-- Replace with your photo: <img src="your-photo.jpg" alt="Author" class="h-72 w-72 rounded-3xl object-cover shadow-xl"> -->
+          <div class="h-72 w-72 rounded-3xl bg-gradient-to-br from-brand-500 to-brand-900 shadow-xl flex items-center justify-center text-7xl">👋</div>
+        </div>
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">About Us</p>
+          <h2 class="mt-1 text-3xl sm:text-4xl font-extrabold text-ink">Simple money advice you can actually use</h2>
+          <p class="mt-5 text-slate-600">
+            [Placeholder] Welcome to WealthWise! Tell your story here: who you are, why you started this blog, and what drives your passion for personal finance and investing.
+          </p>
+          <p class="mt-4 text-slate-600">
+            [Placeholder] Our mission is to make financial literacy accessible to everyone, with honest, research-backed content and zero hype.
+          </p>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm font-medium text-ink">
+            <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Beginner-friendly guides</li>
+            <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Unbiased, honest reviews</li>
+            <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Research-backed content</li>
+            <li class="flex items-center gap-2"><span class="text-brand-600">✔</span> Free tools &amp; resources</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ADSENSE: BANNER (above contact) ================= -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      <!-- ===== ADSENSE AD SLOT #5: Horizontal banner ===== -->
+      <div class="flex min-h-[90px] items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-50 text-xs text-slate-400">
+        Advertisement
+      </div>
+      <!-- ===== END ADSENSE AD SLOT #5 ===== -->
+    </div>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div class="
